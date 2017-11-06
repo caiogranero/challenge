@@ -1,0 +1,31 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Esse é um teste focado em design de código, e conhecimento de orientação a  objeto. O objetivo é avaliar sua experiênica em escrever código de fácil  manutenção, baixo acoplamento, e alta coesão.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "standard": "^10.0.3",
+    "webpack": "^3.8.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "css-loader": "^0.28.7",
+    "style-loader": "^0.18.2",
+    "uglify-es": "^3.0.28",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "dependencies": {
+    "faker": "^4.1.0",
+    "handlebars": "^4.0.11",
+    "moment": "^2.19.1",
+    "uuid": "^3.1.0"
+  }
+}
