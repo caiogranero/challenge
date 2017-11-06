@@ -30,7 +30,8 @@ const Controller = {
     window.setTimeout(() => {
       let message = {
         text: faker.hacker.phrase,
-        timestamp: moment().format('DD/MM/YYYY HH:mm:ss')
+        timestamp: moment().format('DD/MM/YYYY HH:mm:ss'),
+        user: machine
       }
 
       Controller.chat.addMessage(new Message(message), 'machine')
