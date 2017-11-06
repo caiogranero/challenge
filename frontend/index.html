@@ -3,25 +3,49 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-
-    <title>Chat</title>
+    <title>Chat Online</title>
     <link rel="stylesheet" href="./styles.css" type="text/css" media="all">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
   </head>
 
   <body>
-    <h1>Chat</h1>
-
-    <div class="messages">
-      <ul class="message-list"></ul>
-
-      <div class="message-input">
-        <form>
-          <input type="text" id="message-text" />
-          <button type="button" data-action="send" id="btn-send-message">Enviar</button>
-        </form>
-      </div>
+    <div class="menu">
+      <div class="name">Type to start</div>
     </div>
-
+    <ol class="chat"></ol>
+    <div class="text-icon attachment">
+      <i class="fa fa-paperclip"></i>
+    </div>
+    <div class="send text-icon">
+      <i class="fa fa-chevron-right" id="btn-send-text"></i>
+    </div>
+    <input class="textarea" type="text" id="message-text" placeholder="Type here!"/>
+    
     <script src="./dist/bundle.js"></script>
+    
+    <!-- Handlebar templates -->
+
+    <script id="self-template" type="text/x-handlebars-template">
+      <li class="self">
+        <div class="msg">
+          <p>{{text}}</p>
+          <time>{{timestamp}}</time>
+        </div>
+      </li>
+    </script>
+
+    <script id="machine-template" type="text/x-handlebars-template">
+      <li class="other">
+        <div class="msg">
+          <p>{{text}}</p>
+          <time>{{timestamp}}</time>
+        </div>
+      </li>
+    </script>
+
+    <script id="user-title-template" type="text/x-handlebars-template">
+      <div class="name">{{user}}</div>
+      <div class="last">last seen at {{timestamp}}</div>
+    </script>
   </body>
 </html>
